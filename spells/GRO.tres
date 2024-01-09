@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://b4aw1wpg8jqeo"]
+
+[ext_resource type="Texture2D" uid="uid://d04xev3seclx2" path="res://sprites/meta/words/gro.png" id="1_xrvyq"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_mti4h"]
+
+[resource]
+script = ExtResource("2_mti4h")
+name = "GRO"
+image = ExtResource("1_xrvyq")
+empty = false
+special = false
+bullet_property = 9
+spell_1_damage_modifier = 0.9
+spell_1_speed_modifier = 2.0
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.25
+damage_modifier = 0.4
+speed = 190
+speed_random_distribution = 0.2
+drag = 0.5
+spread_degrees = 10.0
+num_bullets = 3
+num_bursts = 3
+num_pierces = 2
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

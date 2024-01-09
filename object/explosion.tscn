@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://ju84acfnyq16"]
+
+[ext_resource type="PackedScene" uid="uid://cd0k4yi4kbbx3" path="res://framework/Fx/ParticleEffect.tscn" id="1_1jnb0"]
+[ext_resource type="Texture2D" uid="uid://pf05finriakn" path="res://sprites/meta/normal.png" id="2_5k8y7"]
+[ext_resource type="Script" path="res://object/explosion.gd" id="2_nsjyg"]
+[ext_resource type="AudioStream" uid="uid://b15ka8ftnj8vf" path="res://sound/explosion.wav" id="4_2w03u"]
+[ext_resource type="Script" path="res://framework/VariableSound2D.gd" id="5_3re71"]
+[ext_resource type="AudioStream" uid="uid://trtiniwjvgds" path="res://sound/hitbass.wav" id="6_2dwh0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjkcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5k8y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5k8y7")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5k8y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5k8y7")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5jht0"]
+radius = 7.0
+
+[node name="ParticleEffect" instance=ExtResource("1_1jnb0")]
+script = ExtResource("2_nsjyg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_gjkcs")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_5jht0")
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="." index="2"]
+stream = ExtResource("4_2w03u")
+volume_db = -3.0
+pitch_scale = 1.6
+max_distance = 4000.0
+bus = &"Fx"
+script = ExtResource("5_3re71")
+
+[node name="Explosion2" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("6_2dwh0")
+volume_db = -6.0
+autoplay = true
+max_distance = 4000.0
+bus = &"Fx"
+script = ExtResource("5_3re71")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

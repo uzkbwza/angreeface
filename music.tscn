@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr04lkb86w11d"]
+
+[ext_resource type="AudioStream" uid="uid://ci5d7mlkt6e0o" path="res://sound/music/bg1.ogg" id="1_oc21i"]
+
+[node name="Music" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_oc21i")
+volume_db = -14.0
+bus = &"Music"

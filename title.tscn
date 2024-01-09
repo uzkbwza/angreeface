@@ -1,0 +1,203 @@
+[gd_scene load_steps=24 format=3 uid="uid://b0sig3sqodf7u"]
+
+[ext_resource type="Texture2D" uid="uid://cp3k3fd2utf0x" path="res://sprites/meta/spritesheet_30.png" id="1_2a1ux"]
+[ext_resource type="Script" path="res://title.gd" id="1_hmvkf"]
+[ext_resource type="Texture2D" uid="uid://c1pdmynctsinu" path="res://sprites/meta/spritesheet_37.png" id="2_3riwl"]
+[ext_resource type="Texture2D" uid="uid://dwfitxagx36dw" path="res://sprites/meta/spritesheet_38.png" id="3_ipo50"]
+[ext_resource type="Texture2D" uid="uid://dcmu5104u146v" path="res://sprites/meta/spritesheet_2.png" id="3_vjg28"]
+[ext_resource type="Texture2D" uid="uid://djndilh7fs8pi" path="res://sprites/meta/spritesheet_17.png" id="4_5vp3h"]
+[ext_resource type="Texture2D" uid="uid://c0pkaoeae8cpk" path="res://sprites/meta/spritesheet_33.png" id="4_j50dj"]
+[ext_resource type="Texture2D" uid="uid://dpgwbhq4xujfe" path="res://sprites/meta/spritesheet_9.png" id="4_v1d4l"]
+[ext_resource type="Texture2D" uid="uid://cjryq6ltghn1j" path="res://sprites/meta/spritesheet_39.png" id="5_g05dq"]
+[ext_resource type="Texture2D" uid="uid://k2r4uji5nqh3" path="res://sprites/meta/spritesheet_4.png" id="5_k86na"]
+[ext_resource type="Texture2D" uid="uid://b4q2sa8ek2lpa" path="res://sprites/meta/spritesheet_27.png" id="6_wk0yy"]
+[ext_resource type="Texture2D" uid="uid://b122wefwchsl8" path="res://sprites/meta/spritesheet_21.png" id="9_mj4lr"]
+[ext_resource type="Texture2D" uid="uid://bdn47dxt1eu8p" path="res://sprites/meta/spritesheet_1.png" id="10_7dodg"]
+[ext_resource type="Texture2D" uid="uid://dt2ne135rr4au" path="res://sprites/meta/spritesheet_13.png" id="11_vnlsp"]
+[ext_resource type="Texture2D" uid="uid://m58giaoeiu8q" path="res://sprites/meta/spritesheet_29.png" id="12_d80ip"]
+[ext_resource type="Texture2D" uid="uid://bl4s1bv76qud5" path="res://sprites/meta/spritesheet_25.png" id="13_frg2m"]
+[ext_resource type="Texture2D" uid="uid://6nwduv3hyo73" path="res://sprites/meta/spritesheet_8.png" id="15_gsi2l"]
+[ext_resource type="Texture2D" uid="uid://bn0ckhinp36ok" path="res://sprites/meta/spritesheet_16.png" id="16_ydg13"]
+[ext_resource type="Texture2D" uid="uid://bxfs2jh3nmqu3" path="res://sprites/meta/spritesheet_3.png" id="17_s1giq"]
+[ext_resource type="Texture2D" uid="uid://ca7octxff0sqe" path="res://sprites/meta/spritesheet_23.png" id="18_nlm4e"]
+[ext_resource type="Texture2D" uid="uid://35r8qvsbbabr" path="res://sprites/meta/spritesheet_14.png" id="20_48idm"]
+[ext_resource type="Texture2D" uid="uid://f40n8krg4blk" path="res://sprites/meta/spritesheet_18.png" id="21_1qi5n"]
+[ext_resource type="Texture2D" uid="uid://6fo8vefdxklp" path="res://sprites/meta/spritesheet_5.png" id="22_tosa6"]
+
+[node name="Title" type="CanvasGroup"]
+script = ExtResource("1_hmvkf")
+
+[node name="Spritesheet30" type="Sprite2D" parent="."]
+position = Vector2(-16, -7)
+scale = Vector2(1.1875, 0.8125)
+texture = ExtResource("1_2a1ux")
+
+[node name="Spritesheet2" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(-2.31579, 0.307693)
+scale = Vector2(0.5, 0.576923)
+texture = ExtResource("3_vjg28")
+
+[node name="Spritesheet17" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(-1.68421, 4.92308)
+scale = Vector2(0.315789, 0.615385)
+texture = ExtResource("4_5vp3h")
+
+[node name="Spritesheet18" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(6.52632, 4.92308)
+scale = Vector2(0.236842, 0.461538)
+texture = ExtResource("4_5vp3h")
+
+[node name="Spritesheet4" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(-9.26316, 2.46154)
+scale = Vector2(0.421053, 0.769231)
+texture = ExtResource("5_k86na")
+
+[node name="Spritesheet27" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(3.36842, 2.15385)
+scale = Vector2(0.421053, 0.807692)
+texture = ExtResource("6_wk0yy")
+
+[node name="Spritesheet5" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(1.68421, 4.92308)
+scale = Vector2(0.157895, 0.384615)
+texture = ExtResource("5_k86na")
+
+[node name="Spritesheet9" type="Sprite2D" parent="Spritesheet30"]
+position = Vector2(4.21053, 1.23077)
+scale = Vector2(0.473684, 0.384615)
+texture = ExtResource("4_v1d4l")
+
+[node name="Spritesheet37" type="Sprite2D" parent="."]
+position = Vector2(2, -5)
+texture = ExtResource("2_3riwl")
+
+[node name="Spritesheet21" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-4, -4)
+scale = Vector2(0.4375, 0.25)
+texture = ExtResource("9_mj4lr")
+flip_v = true
+
+[node name="Spritesheet2" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-7, -1.25)
+scale = Vector2(0.25, 0.65625)
+texture = ExtResource("10_7dodg")
+
+[node name="Spritesheet13" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(2, -4)
+scale = Vector2(0.5625, 0.3125)
+texture = ExtResource("11_vnlsp")
+
+[node name="Spritesheet9" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-2.5, 1)
+scale = Vector2(0.1875, 0.25)
+texture = ExtResource("4_v1d4l")
+
+[node name="Spritesheet10" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-5, 3)
+scale = Vector2(0.1875, 0.125)
+texture = ExtResource("4_v1d4l")
+
+[node name="Spritesheet1" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-8, -2)
+scale = Vector2(0.34375, 0.5)
+texture = ExtResource("10_7dodg")
+
+[node name="Spritesheet3" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(1, 2.38419e-07)
+scale = Vector2(0.34375, 0.5)
+texture = ExtResource("10_7dodg")
+
+[node name="Spritesheet29" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-2.5, 2)
+scale = Vector2(0.1875, 0.25)
+texture = ExtResource("12_d80ip")
+
+[node name="Spritesheet25" type="Sprite2D" parent="Spritesheet37"]
+position = Vector2(-9.53674e-07, 2)
+scale = Vector2(0.375, 0.25)
+texture = ExtResource("13_frg2m")
+
+[node name="Spritesheet38" type="Sprite2D" parent="."]
+position = Vector2(14, -3)
+scale = Vector2(0.84375, 1)
+texture = ExtResource("3_ipo50")
+
+[node name="Spritesheet8" type="Sprite2D" parent="Spritesheet38"]
+position = Vector2(-2.37037, -3.375)
+scale = Vector2(0.444444, 0.453125)
+texture = ExtResource("15_gsi2l")
+
+[node name="Spritesheet16" type="Sprite2D" parent="Spritesheet38"]
+position = Vector2(-8.2963, 0)
+scale = Vector2(0.314815, 0.53125)
+texture = ExtResource("16_ydg13")
+
+[node name="Spritesheet3" type="Sprite2D" parent="Spritesheet38"]
+position = Vector2(3.55556, -3.75)
+scale = Vector2(0.444444, 0.53125)
+texture = ExtResource("17_s1giq")
+
+[node name="Spritesheet27" type="Sprite2D" parent="Spritesheet38"]
+position = Vector2(3.24603, 2.02331)
+rotation = -1.5708
+scale = Vector2(0.334718, 0.413862)
+texture = ExtResource("6_wk0yy")
+
+[node name="Spritesheet23" type="Sprite2D" parent="Spritesheet38"]
+position = Vector2(-2.37037, 2)
+scale = Vector2(0.462963, 0.265625)
+texture = ExtResource("18_nlm4e")
+
+[node name="Spritesheet33" type="Sprite2D" parent="."]
+position = Vector2(-9, 8)
+scale = Vector2(0.875, 1)
+texture = ExtResource("4_j50dj")
+
+[node name="Spritesheet9" type="Sprite2D" parent="Spritesheet33"]
+position = Vector2(-4.57143, -2)
+scale = Vector2(0.321429, 0.6875)
+texture = ExtResource("4_v1d4l")
+flip_h = true
+
+[node name="Spritesheet14" type="Sprite2D" parent="Spritesheet33"]
+position = Vector2(-3.42857, -2)
+scale = Vector2(0.357143, 0.3125)
+texture = ExtResource("20_48idm")
+
+[node name="Spritesheet18" type="Sprite2D" parent="Spritesheet33"]
+position = Vector2(2.42857, 1)
+scale = Vector2(0.410714, 0.375)
+texture = ExtResource("21_1qi5n")
+
+[node name="Spritesheet5" type="Sprite2D" parent="Spritesheet33"]
+position = Vector2(4.57143, -2.5)
+scale = Vector2(0.571429, 0.3125)
+texture = ExtResource("22_tosa6")
+
+[node name="Spritesheet39" type="Sprite2D" parent="."]
+position = Vector2(6, 6)
+scale = Vector2(0.9375, 0.8125)
+texture = ExtResource("5_g05dq")
+
+[node name="Spritesheet21" type="Sprite2D" parent="Spritesheet39"]
+position = Vector2(-5.33333, 0)
+rotation = 1.5708
+scale = Vector2(0.537325, 0.444636)
+texture = ExtResource("9_mj4lr")
+
+[node name="Spritesheet17" type="Sprite2D" parent="Spritesheet39"]
+position = Vector2(6.4, -1.23077)
+scale = Vector2(0.2, 0.307692)
+texture = ExtResource("4_5vp3h")
+
+[node name="Spritesheet23" type="Sprite2D" parent="Spritesheet39"]
+position = Vector2(3.2, 2.46154)
+rotation = 1.5708
+scale = Vector2(0.33309, 0.444636)
+texture = ExtResource("9_mj4lr")
+
+[node name="Spritesheet22" type="Sprite2D" parent="Spritesheet39"]
+position = Vector2(2.91938, -1.0577)
+rotation = 1.5708
+scale = Vector2(0.405112, 0.409559)
+texture = ExtResource("9_mj4lr")

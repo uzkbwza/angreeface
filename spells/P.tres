@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cgibc1e6leot7"]
+
+[ext_resource type="Texture2D" uid="uid://cnhhf3h5r42dw" path="res://sprites/meta/words/p.png" id="1_40mps"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_ffho5"]
+
+[resource]
+script = ExtResource("2_ffho5")
+name = "P"
+image = ExtResource("1_40mps")
+empty = false
+special = false
+bullet_property = 1
+spell_1_damage_modifier = 4.0
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = "Virus
+Paralyze"
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 2
+fire_rate = 0.4
+damage_modifier = 0.65
+speed = 500
+speed_random_distribution = 0.0
+drag = 1.0
+spread_degrees = 40.0
+num_bullets = 2
+num_bursts = 3
+num_pierces = 1
+burst_rate = 0.05
+flank_angle = 90
+flank_time = 0.1

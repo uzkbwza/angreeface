@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckdj8lntj2rnd"]
+
+[ext_resource type="Script" path="res://framework/object/BaseObject2D.gd" id="1_we4mw"]
+[ext_resource type="Shader" path="res://framework/2DObject.gdshader" id="2_kpuko"]
+[ext_resource type="Script" path="res://framework/object/BaseObjectBody2D.gd" id="2_o81ii"]
+[ext_resource type="Script" path="res://framework/FiniteStateMachine/StateMachine2D.gd" id="4_pmtwg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ly4k1"]
+resource_local_to_scene = true
+shader = ExtResource("2_kpuko")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash = false
+shader_parameter/outline = false
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/replace_color = false
+shader_parameter/color_to_replace = Color(1, 0, 1, 1)
+shader_parameter/replacement_color = Color(1, 0, 1, 1)
+shader_parameter/replacement_dist = 0.01
+
+[node name="BaseObject2D" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_we4mw")
+
+[node name="Flip" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flip"]
+unique_name_in_owner = true
+root_node = NodePath("../../Body")
+
+[node name="Sounds" type="Node2D" parent="Flip"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Flip"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_ly4k1")
+
+[node name="Body" type="CharacterBody2D" parent="." node_paths=PackedStringArray("host") groups=["Object"]]
+unique_name_in_owner = true
+collision_layer = 4
+script = ExtResource("2_o81ii")
+host = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+
+[node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("animation_players")]
+unique_name_in_owner = true
+script = ExtResource("4_pmtwg")
+animation_players = [NodePath("../Flip/AnimationPlayer")]

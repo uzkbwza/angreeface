@@ -1,0 +1,211 @@
+[gd_scene load_steps=27 format=3 uid="uid://dvctkw1xgmhpk"]
+
+[ext_resource type="PackedScene" uid="uid://ckdj8lntj2rnd" path="res://framework/object/BaseObject2D.tscn" id="1_01ymw"]
+[ext_resource type="Script" path="res://object/character.gd" id="2_kjn5l"]
+[ext_resource type="Resource" uid="uid://7osxh1choco5" path="res://spells/None.tres" id="3_stm5j"]
+[ext_resource type="Script" path="res://object/states/CharacterAlive.gd" id="3_xqpmb"]
+[ext_resource type="AudioStream" uid="uid://dg00yh24jhoap" path="res://sound/shootbass.wav" id="4_1carm"]
+[ext_resource type="Shader" path="res://framework/2DObject.gdshader" id="4_a0qj1"]
+[ext_resource type="Script" path="res://framework/VariableSound2D.gd" id="5_jos4l"]
+[ext_resource type="Script" path="res://framework/object/state/ObjectState.gd" id="6_4k5c6"]
+[ext_resource type="AudioStream" uid="uid://ch4yy7ptunaaw" path="res://sound/shoothigh1.wav" id="6_ieipd"]
+[ext_resource type="Texture2D" uid="uid://cr4wp2kr85r5m" path="res://sprites/meta/words/mo.png" id="6_kd6sl"]
+[ext_resource type="Texture2D" uid="uid://ejqm8xdykqjw" path="res://sprites/meta/words/blank.png" id="6_oej4p"]
+[ext_resource type="AudioStream" uid="uid://dd5ak0t68ie8y" path="res://sound/shootsound.wav" id="7_41q2x"]
+[ext_resource type="AudioStream" uid="uid://dc36sujdmnd8q" path="res://sound/shootpoison.wav" id="7_fwx3u"]
+[ext_resource type="AudioStream" uid="uid://demgkiahuj2l7" path="res://sound/shootvirus.wav" id="8_e4864"]
+[ext_resource type="Texture2D" uid="uid://dxbteik2abell" path="res://sprites/meta/words/sp.png" id="8_pshvj"]
+[ext_resource type="AudioStream" uid="uid://bjlr04ptbmw1e" path="res://sound/shootfire.wav" id="9_ygayc"]
+[ext_resource type="AudioStream" uid="uid://bhbnualgn0nju" path="res://sound/paralyze.wav" id="10_1b1iw"]
+[ext_resource type="AudioStream" uid="uid://bcqrvdg80lmt1" path="res://sound/piercing.wav" id="11_puhy3"]
+[ext_resource type="AudioStream" uid="uid://r38kna8qkrsu" path="res://sound/explosive.wav" id="12_334qk"]
+[ext_resource type="AudioStream" uid="uid://dnu8lpvr5eq2s" path="res://sound/lightning.wav" id="13_258cv"]
+[ext_resource type="AudioStream" uid="uid://40dnwjtkee1l" path="res://sound/split.wav" id="13_ux3bn"]
+[ext_resource type="AudioStream" uid="uid://cl8d88opcpmgo" path="res://sound/big.wav" id="14_yk624"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1r8fy"]
+resource_local_to_scene = true
+shader = ExtResource("4_a0qj1")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash = false
+shader_parameter/outline = false
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/replace_color = false
+shader_parameter/color_to_replace = Color(1, 0, 1, 1)
+shader_parameter/replacement_color = Color(1, 0, 1, 1)
+shader_parameter/replacement_dist = 0.01
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d6q0d"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+angular_velocity_min = -405.72
+angular_velocity_max = 399.5
+gravity = Vector3(0, -20, 0)
+scale_min = 0.1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8gitx"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+angular_velocity_min = -405.72
+angular_velocity_max = 399.5
+gravity = Vector3(0, -20, 0)
+scale_min = 0.0
+scale_max = 0.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r8k8c"]
+radius = 7.0
+height = 20.0
+
+[node name="Character" instance=ExtResource("1_01ymw")]
+script = ExtResource("2_kjn5l")
+character_move_speed = 1500.0
+move_drag = 3.0
+idle_drag = 5.0
+spell_count = 2
+spell_1 = ExtResource("3_stm5j")
+spell_2 = ExtResource("3_stm5j")
+modifier_spell = null
+
+[node name="ShootBass" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="0"]
+stream = ExtResource("4_1carm")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+pitch_variation = 0.2
+
+[node name="ShootHi" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="1"]
+stream = ExtResource("6_ieipd")
+volume_db = -9.0
+pitch_scale = 1.53
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootHi2" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="2"]
+stream = ExtResource("7_41q2x")
+volume_db = -16.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootHi3" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="3"]
+stream = ExtResource("7_41q2x")
+volume_db = -7.0
+pitch_scale = 3.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootPoison" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="4"]
+stream = ExtResource("7_fwx3u")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootVirus" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="5"]
+stream = ExtResource("8_e4864")
+volume_db = -9.0
+pitch_scale = 1.75
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootFire" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="6"]
+stream = ExtResource("9_ygayc")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootParalyze" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="7"]
+stream = ExtResource("10_1b1iw")
+volume_db = -15.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+pitch_variation = 0.2
+
+[node name="ShootPiercing" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="8"]
+stream = ExtResource("11_puhy3")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootExplosive" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="9"]
+stream = ExtResource("12_334qk")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootSplit" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="10"]
+stream = ExtResource("13_ux3bn")
+volume_db = -9.0
+pitch_scale = 1.4
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootBig" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="11"]
+stream = ExtResource("14_yk624")
+volume_db = -9.0
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="ShootLightning" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="12"]
+stream = ExtResource("13_258cv")
+volume_db = -9.0
+pitch_scale = 1.35
+bus = &"Fx"
+script = ExtResource("5_jos4l")
+
+[node name="Sprite" parent="Flip" index="2"]
+material = SubResource("ShaderMaterial_1r8fy")
+
+[node name="Body" parent="." index="1" node_paths=PackedStringArray("host")]
+motion_mode = 1
+host = NodePath("..")
+drag = 6.09006
+
+[node name="StateMachine" parent="." index="2" node_paths=PackedStringArray("animation_players")]
+animation_players = [NodePath("../Flip/AnimationPlayer")]
+
+[node name="Alive" type="Node2D" parent="StateMachine" index="0"]
+script = ExtResource("3_xqpmb")
+
+[node name="Dead" type="Node2D" parent="StateMachine" index="1"]
+script = ExtResource("6_4k5c6")
+apply_drag = false
+apply_physics = false
+
+[node name="FireTimer" type="Timer" parent="." index="3"]
+one_shot = true
+
+[node name="FireEffect" type="GPUParticles2D" parent="." index="4"]
+unique_name_in_owner = true
+emitting = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_d6q0d")
+texture = ExtResource("6_oej4p")
+
+[node name="PoisonEffect" type="GPUParticles2D" parent="." index="5"]
+unique_name_in_owner = true
+emitting = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_8gitx")
+texture = ExtResource("6_kd6sl")
+
+[node name="VirusEffect" type="GPUParticles2D" parent="." index="6"]
+unique_name_in_owner = true
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_8gitx")
+texture = ExtResource("8_pshvj")
+
+[node name="OnFireDamageTimer" type="Timer" parent="." index="7"]
+wait_time = 0.5
+
+[node name="CharacterDetector" type="Area2D" parent="." index="8"]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterDetector" index="0"]
+shape = SubResource("CapsuleShape2D_r8k8c")

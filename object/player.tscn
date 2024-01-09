@@ -1,0 +1,140 @@
+[gd_scene load_steps=16 format=3 uid="uid://c87w0vpo5n2pj"]
+
+[ext_resource type="PackedScene" uid="uid://dvctkw1xgmhpk" path="res://object/character.tscn" id="1_c3xxx"]
+[ext_resource type="Script" path="res://object/PlayerComponent.gd" id="2_gpl7x"]
+[ext_resource type="Script" path="res://addons/smoothing/smoothing_2d.gd" id="3_6qfsf"]
+[ext_resource type="Script" path="res://framework/VariableSound2D.gd" id="4_5e87l"]
+[ext_resource type="AudioStream" uid="uid://ju343y15wt02" path="res://sound/hurt.wav" id="5_m21oj"]
+[ext_resource type="AudioStream" uid="uid://bfebwv5j424ss" path="res://sound/spellpickup.wav" id="5_pji2e"]
+[ext_resource type="Texture2D" uid="uid://tnmq18goxwin" path="res://sprites/spritesheet_465.png" id="7_evye5"]
+[ext_resource type="Shader" uid="uid://c4a4cl2rqry7n" path="res://PlayerShader.tres" id="7_s74qh"]
+[ext_resource type="Texture2D" uid="uid://b4lhpnhkv0c3l" path="res://sprites/meta/player.png" id="9_1gq0y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1a7dn"]
+resource_local_to_scene = true
+shader = ExtResource("7_s74qh")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash = false
+shader_parameter/outline = false
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/replace_color = false
+shader_parameter/color_to_replace = Color(1, 0, 1, 1)
+shader_parameter/replacement_color = Color(1, 0, 1, 1)
+shader_parameter/replacement_dist = 0.01
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58jx7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_evye5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_1gq0y")
+}],
+"loop": true,
+"name": &"square",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yb7j"]
+radius = 2.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8fn34"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+angular_velocity_min = -405.72
+angular_velocity_max = 399.5
+gravity = Vector3(0, -20, 0)
+scale_min = 0.0
+scale_max = 0.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ud7lh"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+angular_velocity_min = -405.72
+angular_velocity_max = 399.5
+gravity = Vector3(0, -20, 0)
+scale_min = 0.0
+scale_max = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sllya"]
+radius = 12.0416
+
+[node name="Player" groups=["Player"] instance=ExtResource("1_c3xxx")]
+character_move_speed = 3500.0
+move_drag = 5.0
+
+[node name="PlayerComponent" type="Node2D" parent="." index="0"]
+unique_name_in_owner = true
+script = ExtResource("2_gpl7x")
+
+[node name="Smoothing2D" type="Node2D" parent="." index="2"]
+script = ExtResource("3_6qfsf")
+target = NodePath("../Flip")
+
+[node name="GotHit" parent="Flip/Sounds" index="13"]
+volume_db = -5.0
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="15"]
+stream = ExtResource("5_m21oj")
+volume_db = -5.0
+max_distance = 5000.0
+bus = &"Fx"
+script = ExtResource("4_5e87l")
+pitch_variation = 0.025
+
+[node name="SpellPickup" type="AudioStreamPlayer2D" parent="Flip/Sounds" index="16"]
+stream = ExtResource("5_pji2e")
+volume_db = -15.0
+max_distance = 5000.0
+bus = &"Fx"
+script = ExtResource("4_5e87l")
+pitch_variation = 0.025
+
+[node name="Sprite" parent="Flip" index="2"]
+material = SubResource("ShaderMaterial_1a7dn")
+position = Vector2(0, 12)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_58jx7")
+animation = &"square"
+offset = Vector2(0, -8)
+
+[node name="Body" parent="." index="4" node_paths=PackedStringArray("host")]
+collision_layer = 2
+host = NodePath("..")
+
+[node name="CollisionShape2D" parent="Body" index="0"]
+shape = SubResource("CircleShape2D_6yb7j")
+
+[node name="StateMachine" parent="." index="5" node_paths=PackedStringArray("animation_players")]
+animation_players = [NodePath("../Flip/AnimationPlayer")]
+
+[node name="PoisonEffect" parent="." index="8"]
+process_material = SubResource("ParticleProcessMaterial_8fn34")
+
+[node name="VirusEffect" parent="." index="9"]
+process_material = SubResource("ParticleProcessMaterial_ud7lh")
+
+[node name="SpellDetector" type="Area2D" parent="." index="10"]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpellDetector" index="0"]
+shape = SubResource("CircleShape2D_sllya")
+
+[connection signal="area_entered" from="SpellDetector" to="PlayerComponent" method="_on_spell_detector_area_entered"]
+[connection signal="area_exited" from="SpellDetector" to="PlayerComponent" method="_on_spell_detector_area_exited"]

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://o57q0jfa4qa2"]
+
+[ext_resource type="Texture2D" uid="uid://cr4wp2kr85r5m" path="res://sprites/meta/words/mo.png" id="1_sq2mj"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_xuq0q"]
+
+[resource]
+script = ExtResource("2_xuq0q")
+name = "MO"
+image = ExtResource("1_sq2mj")
+empty = false
+special = false
+bullet_property = 1
+spell_1_damage_modifier = 1.9
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 0.9
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Fire"
+fire_pattern = 0
+fire_rate = 0.2
+damage_modifier = 0.4
+speed = 90
+speed_random_distribution = 0.0
+drag = 0.67
+spread_degrees = 50.0
+num_bullets = 5
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://0pnrap48l0fw"]
+
+[ext_resource type="Texture2D" uid="uid://c5h0ybdtl8wph" path="res://sprites/meta/words/our.png" id="1_ao8oi"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_fh27k"]
+
+[resource]
+script = ExtResource("2_fh27k")
+name = "OUR"
+image = ExtResource("1_ao8oi")
+empty = false
+special = false
+bullet_property = 8
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 1.6
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Split"
+fire_pattern = 0
+fire_rate = 1.0
+damage_modifier = 2.0
+speed = 800
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 0.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 2
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

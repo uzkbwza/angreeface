@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://c8t0cuu6kedkh"]
+
+[ext_resource type="Texture2D" uid="uid://yky14j4lmbr0" path="res://sprites/meta/words/f.png" id="1_hap1a"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_fkw7t"]
+
+[resource]
+script = ExtResource("2_fkw7t")
+name = "F"
+image = ExtResource("1_hap1a")
+empty = false
+special = false
+bullet_property = 4
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.1
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Virus"
+fire_pattern = 1
+fire_rate = 0.7
+damage_modifier = 0.3
+speed = 800
+speed_random_distribution = 0.0
+drag = 6.0
+spread_degrees = 40.0
+num_bullets = 18
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

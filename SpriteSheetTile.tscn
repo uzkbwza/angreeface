@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccki0snrf583v"]
+
+[ext_resource type="Texture2D" uid="uid://begu8hd1vpufk" path="res://Roguelike 1-8.png" id="1_1gx2i"]
+[ext_resource type="Shader" path="res://SpriteSheetTile.gdshader" id="1_owrhb"]
+[ext_resource type="Script" path="res://SpriteSheetTile.gd" id="2_iy6i6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbiys"]
+shader = ExtResource("1_owrhb")
+shader_parameter/enabled = false
+shader_parameter/remove_color = Color(0.168627, 0.133333, 0.254902, 1)
+shader_parameter/dist = 0.03
+
+[node name="SpriteSheetTile" type="Sprite2D"]
+material = SubResource("ShaderMaterial_nbiys")
+texture = ExtResource("1_1gx2i")
+region_enabled = true
+region_rect = Rect2(128, 400, 16, 16)
+script = ExtResource("2_iy6i6")
+tile = Vector2i(8, 25)

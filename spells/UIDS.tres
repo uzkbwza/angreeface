@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://d1loj5bbsxots"]
+
+[ext_resource type="Texture2D" uid="uid://d2uk1brenkink" path="res://sprites/meta/words/uids.png" id="1_8aylg"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_lxvef"]
+
+[resource]
+script = ExtResource("2_lxvef")
+name = "UIDS"
+image = ExtResource("1_8aylg")
+empty = false
+special = false
+bullet_property = 9
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 2.0
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 2
+fire_rate = 0.25
+damage_modifier = 1.0
+speed = 600
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 20.0
+num_bullets = 4
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 80
+flank_time = 0.35

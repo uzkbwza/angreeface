@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnq861a457g87"]
+
+[ext_resource type="Script" path="res://KillCounter.gd" id="1_0awma"]
+[ext_resource type="Texture2D" uid="uid://f40n8krg4blk" path="res://sprites/meta/spritesheet_18.png" id="2_cbjtk"]
+[ext_resource type="Texture2D" uid="uid://dj8gbjr4oyxre" path="res://sprites/meta/spritesheet_11.png" id="3_cvy57"]
+[ext_resource type="Texture2D" uid="uid://dcmu5104u146v" path="res://sprites/meta/spritesheet_2.png" id="4_kfqop"]
+[ext_resource type="Texture2D" uid="uid://44ijygpfs7rj" path="res://sprites/meta/spritesheet_24.png" id="5_ku1jd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adkgm"]
+bg_color = Color(0.14902, 0.117647, 0.227451, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[node name="KillCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("1_0awma")
+color_1 = Color(1, 1, 1, 0.686275)
+color_2 = Color(1, 1, 1, 0.152941)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.5
+offset_top = 43.0
+offset_right = 12.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Control" type="Control" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Hi" type="CanvasGroup" parent="HBoxContainer3/Control"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-9, 14)
+
+[node name="Panel" type="Panel" parent="HBoxContainer3/Control/Hi"]
+show_behind_parent = true
+offset_left = -14.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_adkgm")
+
+[node name="Spritesheet18" type="Sprite2D" parent="HBoxContainer3/Control/Hi"]
+position = Vector2(-9, 0)
+scale = Vector2(0.5, 0.625)
+texture = ExtResource("2_cbjtk")
+
+[node name="Spritesheet19" type="Sprite2D" parent="HBoxContainer3/Control/Hi"]
+position = Vector2(-8, 4)
+scale = Vector2(0.5, 0.375)
+texture = ExtResource("2_cbjtk")
+flip_h = true
+flip_v = true
+
+[node name="Spritesheet11" type="Sprite2D" parent="HBoxContainer3/Control/Hi"]
+position = Vector2(0, 2)
+scale = Vector2(0.5, 0.625)
+texture = ExtResource("3_cvy57")
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 16)
+
+[node name="Spritesheet23" type="Sprite2D" parent="HBoxContainer3/Control/Hi"]
+position = Vector2(5, 4)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_kfqop")
+
+[node name="Spritesheet24" type="Sprite2D" parent="HBoxContainer3/Control/Hi"]
+position = Vector2(5, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("5_ku1jd")

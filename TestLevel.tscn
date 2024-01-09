@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b84wcgkv68iwv"]
+
+[ext_resource type="TileSet" uid="uid://t2l2r1kyoopq" path="res://RoguelikeTileSet.tres" id="1_g47mn"]
+
+[node name="Map" type="TileMap"]
+tile_set = ExtResource("1_g47mn")
+format = 2

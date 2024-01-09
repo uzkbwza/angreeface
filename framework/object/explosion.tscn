@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0l1brqefo701"]
+
+[ext_resource type="PackedScene" uid="uid://cd0k4yi4kbbx3" path="res://framework/Fx/ParticleEffect.tscn" id="1_v63jx"]
+[ext_resource type="Texture2D" uid="uid://pf05finriakn" path="res://sprites/meta/normal.png" id="2_26teg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjkcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_26teg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ParticleEffect" instance=ExtResource("1_v63jx")]
+lifetime = 0.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_gjkcs")

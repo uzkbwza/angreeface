@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://bpl34plq4aavj"]
+
+[ext_resource type="Texture2D" uid="uid://bh0ql58n5yktu" path="res://sprites/meta/words/ui.png" id="1_lp1mr"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_kyn64"]
+
+[resource]
+script = ExtResource("2_kyn64")
+name = "UI"
+image = ExtResource("1_lp1mr")
+empty = false
+special = false
+bullet_property = 8
+spell_1_damage_modifier = 1.25
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = "Explosive"
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.064
+damage_modifier = 0.6
+speed = 160
+speed_random_distribution = 0.05
+drag = 0.0
+spread_degrees = 10.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

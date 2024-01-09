@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://bmiv8w8kbny5t"]
+
+[ext_resource type="Texture2D" uid="uid://clk6fw3cxk6p0" path="res://sprites/meta/words/mals.png" id="1_0omud"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_35jyy"]
+
+[resource]
+script = ExtResource("2_35jyy")
+name = "MALS"
+image = ExtResource("1_0omud")
+empty = false
+special = false
+bullet_property = 9
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.25
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Virus"
+fire_pattern = 1
+fire_rate = 0.5
+damage_modifier = 1.5
+speed = 1100
+speed_random_distribution = 0.0
+drag = 10.0
+spread_degrees = 45.0
+num_bullets = 3
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

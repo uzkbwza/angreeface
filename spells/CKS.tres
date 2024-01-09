@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cpf8k8u62o2ri"]
+
+[ext_resource type="Texture2D" uid="uid://bfx77lvhldb32" path="res://sprites/meta/words/cks.png" id="1_jnemu"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_smf8b"]
+
+[resource]
+script = ExtResource("2_smf8b")
+name = "CKS"
+image = ExtResource("1_jnemu")
+empty = false
+special = false
+bullet_property = 4
+spell_1_damage_modifier = 0.9
+spell_1_speed_modifier = 1.7
+spell_1_fire_rate_modifier = 1.6
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = "Swarm"
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 1.0
+damage_modifier = 2.0
+speed = 250
+speed_random_distribution = 0.01
+drag = 1.0
+spread_degrees = 12.0
+num_bullets = 1
+num_bursts = 2
+num_pierces = 1
+burst_rate = 0.2
+flank_angle = 90
+flank_time = 0.016

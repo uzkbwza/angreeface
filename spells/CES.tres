@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://bpm1gepj2qntl"]
+
+[ext_resource type="Texture2D" uid="uid://bnajvx4hkm83x" path="res://sprites/meta/words/ces.png" id="1_qf4gk"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_8a7ts"]
+
+[resource]
+script = ExtResource("2_8a7ts")
+name = "CES"
+image = ExtResource("1_qf4gk")
+empty = false
+special = false
+bullet_property = 8
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.5
+spell_1_fire_rate_modifier = 1.1
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.032
+damage_modifier = 0.2
+speed = 250
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 0.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://c16r05heckeds"]
+
+[ext_resource type="Texture2D" uid="uid://rdrv2o47sxlh" path="res://sprites/meta/words/moun.png" id="1_hq6yq"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_26ej3"]
+
+[resource]
+script = ExtResource("2_26ej3")
+name = "MOUN"
+image = ExtResource("1_hq6yq")
+empty = false
+special = false
+bullet_property = 9
+spell_1_damage_modifier = 1.2
+spell_1_speed_modifier = 0.9
+spell_1_fire_rate_modifier = 0.9
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 1.2
+damage_modifier = 3.0
+speed = 200
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 0.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 4
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

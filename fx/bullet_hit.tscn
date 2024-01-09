@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://cla6du3yqymca"]
+
+[ext_resource type="PackedScene" uid="uid://cd0k4yi4kbbx3" path="res://framework/Fx/ParticleEffect.tscn" id="1_uv5ia"]
+[ext_resource type="Texture2D" uid="uid://pf05finriakn" path="res://sprites/meta/normal.png" id="2_h4wgv"]
+[ext_resource type="Script" path="res://fx/bullet_hit.gd" id="2_ri55x"]
+[ext_resource type="AudioStream" uid="uid://b71n27s3j0065" path="res://sound/hit.wav" id="4_uoobi"]
+[ext_resource type="Script" path="res://framework/VariableSound2D.gd" id="5_7ex28"]
+[ext_resource type="AudioStream" uid="uid://trtiniwjvgds" path="res://sound/hitbass.wav" id="6_eawa2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alvc1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h4wgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4wgv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h4wgv")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="ParticleEffect" instance=ExtResource("1_uv5ia")]
+script = ExtResource("2_ri55x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_alvc1")
+autoplay = "default"
+
+[node name="VariableSound2D3" type="AudioStreamPlayer2D" parent="." index="1"]
+stream = ExtResource("4_uoobi")
+volume_db = -12.0
+pitch_scale = 1.5
+autoplay = true
+bus = &"Fx"
+script = ExtResource("5_7ex28")
+pitch_variation = 0.2
+
+[node name="VariableSound2D4" type="AudioStreamPlayer2D" parent="." index="2"]
+stream = ExtResource("6_eawa2")
+volume_db = -16.0
+autoplay = true
+bus = &"Fx"
+script = ExtResource("5_7ex28")

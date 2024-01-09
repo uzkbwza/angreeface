@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://xmnr1dlcwf80"]
+
+[ext_resource type="Texture2D" uid="uid://c1yg2i1kctq0g" path="res://sprites/meta/words/und.png" id="1_uyovf"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_g5ptb"]
+
+[resource]
+script = ExtResource("2_g5ptb")
+name = "UND"
+image = ExtResource("1_uyovf")
+empty = false
+special = false
+bullet_property = 4
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.2
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = "Virus"
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.1
+damage_modifier = 0.35
+speed = 600
+speed_random_distribution = 0.0
+drag = 3.0
+spread_degrees = 20.0
+num_bullets = 5
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

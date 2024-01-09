@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://dm0f57bq4dyww"]
+
+[ext_resource type="Texture2D" uid="uid://bvwtfbhyf4eow" path="res://sprites/meta/words/ols.png" id="1_0l5xb"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_qy1pr"]
+
+[resource]
+script = ExtResource("2_qy1pr")
+name = "OLS"
+image = ExtResource("1_0l5xb")
+empty = false
+special = false
+bullet_property = 2
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 1.7
+spell_1_fire_rate_modifier = 1.5
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Lightning Chain"
+fire_pattern = 0
+fire_rate = 0.064
+damage_modifier = 0.7
+speed = 200
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 55.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

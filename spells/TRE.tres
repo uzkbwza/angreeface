@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cwbqk1dcr3dt5"]
+
+[ext_resource type="Texture2D" uid="uid://dr65g6jbj4yb1" path="res://sprites/meta/words/tre.png" id="1_lswj8"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_aloh8"]
+
+[resource]
+script = ExtResource("2_aloh8")
+name = "TRE"
+image = ExtResource("1_lswj8")
+bullet_property = 8
+spell_1_damage_modifier = 2.0
+spell_1_speed_modifier = 1.2
+spell_1_fire_rate_modifier = 0.7
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Explosive"
+fire_pattern = 0
+fire_rate = 0.05
+damage_modifier = 0.1
+speed = 400
+speed_random_distribution = 0.1
+drag = 0.1
+spread_degrees = 20.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

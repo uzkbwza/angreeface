@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cbginihptk550"]
+
+[ext_resource type="Texture2D" uid="uid://cawio4viot65c" path="res://sprites/meta/words/r.png" id="1_0qbwb"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_s76qo"]
+
+[resource]
+script = ExtResource("2_s76qo")
+name = "R"
+image = ExtResource("1_0qbwb")
+empty = false
+special = false
+bullet_property = 9
+spell_1_damage_modifier = 1.3
+spell_1_speed_modifier = 1.3
+spell_1_fire_rate_modifier = 1.0
+call_update_functions = ""
+additional_properties = "Fire"
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.55
+damage_modifier = 1.0
+speed = 300
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 10.0
+num_bullets = 3
+num_bursts = 2
+num_pierces = 1
+burst_rate = 0.2
+flank_angle = 90
+flank_time = 0.016

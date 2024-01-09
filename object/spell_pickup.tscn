@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://b68e4cjjf1drx"]
+
+[ext_resource type="Script" path="res://object/SpellPickup.gd" id="1_cu4im"]
+[ext_resource type="Shader" path="res://hud/spell_display.gdshader" id="2_htsgt"]
+[ext_resource type="Texture2D" uid="uid://yie3vnqfmwul" path="res://sprites/meta/words/blank_small.png" id="2_wx21n"]
+[ext_resource type="Texture2D" uid="uid://dwfitxagx36dw" path="res://sprites/meta/spritesheet_38.png" id="3_ddy7m"]
+[ext_resource type="AudioStream" uid="uid://caami12hyds4" path="res://sound/spelldrop2.wav" id="5_fpgqf"]
+[ext_resource type="Script" path="res://framework/VariableSound2D.gd" id="6_ys230"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ijjxc"]
+resource_local_to_scene = true
+shader = ExtResource("2_htsgt")
+shader_parameter/color = Color(1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82ht6"]
+radius = 20.0
+
+[node name="SpellPickup" type="Node2D"]
+script = ExtResource("1_cu4im")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ijjxc")
+scale = Vector2(2, 2)
+texture = ExtResource("2_wx21n")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_82ht6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.032
+autostart = true
+
+[node name="E" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
+position = Vector2(2, -24)
+scale = Vector2(2.375, 1.6875)
+texture = ExtResource("3_ddy7m")
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 16)
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_fpgqf")
+volume_db = -15.0
+bus = &"Fx"
+script = ExtResource("6_ys230")
+pitch_variation = 0.2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

@@ -1,0 +1,291 @@
+[gd_scene load_steps=25 format=3 uid="uid://wxxtwtx777mn"]
+
+[ext_resource type="Script" path="res://hud/spell_display.gd" id="1_3nmym"]
+[ext_resource type="Texture2D" uid="uid://yie3vnqfmwul" path="res://sprites/meta/words/blank_small.png" id="2_5msbt"]
+[ext_resource type="Shader" path="res://hud/spell_display.gdshader" id="2_p21ln"]
+[ext_resource type="Texture2D" uid="uid://dpqmdohpnj6qy" path="res://sprites/meta/words/blank_white.png" id="3_o6s1i"]
+[ext_resource type="Texture2D" uid="uid://djndilh7fs8pi" path="res://sprites/meta/spritesheet_17.png" id="5_e8rim"]
+[ext_resource type="Texture2D" uid="uid://bl4s1bv76qud5" path="res://sprites/meta/spritesheet_25.png" id="6_eabm0"]
+[ext_resource type="Texture2D" uid="uid://6fo8vefdxklp" path="res://sprites/meta/spritesheet_5.png" id="7_j28kq"]
+[ext_resource type="Texture2D" uid="uid://dlhga1alilo2h" path="res://sprites/meta/spritesheet_26.png" id="8_xb855"]
+[ext_resource type="Texture2D" uid="uid://dvmoqd6uxnitw" path="res://sprites/meta/spritesheet_0.png" id="9_a1x6m"]
+[ext_resource type="Texture2D" uid="uid://bdn47dxt1eu8p" path="res://sprites/meta/spritesheet_1.png" id="10_bpsuu"]
+[ext_resource type="Texture2D" uid="uid://in37br24peam" path="res://sprites/meta/spritesheet_20.png" id="12_5pshi"]
+[ext_resource type="Texture2D" uid="uid://6nwduv3hyo73" path="res://sprites/meta/spritesheet_8.png" id="12_fr8n7"]
+[ext_resource type="Texture2D" uid="uid://tjm8pw3ar2p0" path="res://sprites/meta/spritesheet_22.png" id="13_5a2mv"]
+[ext_resource type="Texture2D" uid="uid://bn0ckhinp36ok" path="res://sprites/meta/spritesheet_16.png" id="14_rdmm3"]
+[ext_resource type="Texture2D" uid="uid://b4q2sa8ek2lpa" path="res://sprites/meta/spritesheet_27.png" id="15_5vly2"]
+[ext_resource type="Texture2D" uid="uid://35r8qvsbbabr" path="res://sprites/meta/spritesheet_14.png" id="16_8dh1n"]
+[ext_resource type="Texture2D" uid="uid://44ijygpfs7rj" path="res://sprites/meta/spritesheet_24.png" id="17_5w3dc"]
+[ext_resource type="Texture2D" uid="uid://b122wefwchsl8" path="res://sprites/meta/spritesheet_21.png" id="18_gi82p"]
+[ext_resource type="Texture2D" uid="uid://dpgwbhq4xujfe" path="res://sprites/meta/spritesheet_9.png" id="19_d6d4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qerxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfjp6"]
+bg_color = Color(1, 1, 1, 0.109804)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_frsdx"]
+resource_local_to_scene = true
+shader = ExtResource("2_p21ln")
+shader_parameter/color = Color(0.111197, 0.111197, 0.111197, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khqri"]
+bg_color = Color(1, 1, 1, 0.109804)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rl3ld"]
+resource_local_to_scene = true
+shader = ExtResource("2_p21ln")
+shader_parameter/color = Color(0.737193, 0.737193, 0.737193, 1)
+
+[node name="SpellDisplay" type="Node2D"]
+script = ExtResource("1_3nmym")
+
+[node name="ReloadProgress" type="ProgressBar" parent="."]
+offset_left = -36.0
+offset_top = 1.0
+offset_right = 35.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_qerxn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rfjp6")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Spell1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_frsdx")
+position = Vector2(-19, 5)
+scale = Vector2(4.57143, 2)
+texture = ExtResource("2_5msbt")
+
+[node name="ProgressBar" type="ProgressBar" parent="Spell1"]
+visible = false
+offset_left = -8.0
+offset_top = -5.5
+offset_right = 7.0
+offset_bottom = -3.5
+theme_override_styles/background = SubResource("StyleBoxEmpty_qerxn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_khqri")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Spell2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rl3ld")
+position = Vector2(19, 5)
+scale = Vector2(2, 2)
+texture = ExtResource("2_5msbt")
+
+[node name="ProgressBar" type="ProgressBar" parent="Spell2"]
+visible = false
+offset_left = -7.5
+offset_top = -5.5
+offset_right = 7.5
+offset_bottom = -3.5
+theme_override_styles/background = SubResource("StyleBoxEmpty_qerxn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_khqri")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Cursor2" type="Node2D" parent="."]
+position = Vector2(19, 4)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Cursor2"]
+self_modulate = Color(1, 1, 1, 0.188235)
+
+[node name="Spritesheet1" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(0, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet2" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(-9, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet3" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(8, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet4" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(0, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet5" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(-9, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet6" type="Sprite2D" parent="Cursor2/CanvasGroup"]
+position = Vector2(8, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Cursor" type="Node2D" parent="."]
+position = Vector2(-19, 4)
+
+[node name="Spritesheet0" type="Sprite2D" parent="Cursor"]
+position = Vector2(0, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet1" type="Sprite2D" parent="Cursor"]
+position = Vector2(-9, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet2" type="Sprite2D" parent="Cursor"]
+position = Vector2(8, 10)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet3" type="Sprite2D" parent="Cursor"]
+position = Vector2(0, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet4" type="Sprite2D" parent="Cursor"]
+position = Vector2(-9, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet5" type="Sprite2D" parent="Cursor"]
+position = Vector2(8, 9)
+texture = ExtResource("3_o6s1i")
+
+[node name="Spritesheet17" type="Sprite2D" parent="."]
+position = Vector2(45.8326, 7.87486)
+scale = Vector2(0.0625, 0.5625)
+texture = ExtResource("5_e8rim")
+
+[node name="Spritesheet25" type="Sprite2D" parent="."]
+position = Vector2(42.8326, 2.87486)
+scale = Vector2(0.375, 0.125)
+texture = ExtResource("6_eabm0")
+flip_v = true
+
+[node name="Spritesheet5" type="Sprite2D" parent="."]
+position = Vector2(39.8326, 7.37486)
+scale = Vector2(0.0625, 0.5625)
+texture = ExtResource("7_j28kq")
+flip_h = true
+
+[node name="Spritesheet26" type="Sprite2D" parent="."]
+position = Vector2(42.8326, 12.3749)
+scale = Vector2(0.4375, 0.0625)
+texture = ExtResource("8_xb855")
+
+[node name="Spritesheet0" type="Sprite2D" parent="."]
+position = Vector2(45.3326, 4.87486)
+texture = ExtResource("9_a1x6m")
+
+[node name="Spritesheet1" type="Sprite2D" parent="."]
+position = Vector2(42.6935, 13.261)
+scale = Vector2(0.0664063, 0.107422)
+texture = ExtResource("10_bpsuu")
+
+[node name="Spritesheet2" type="Sprite2D" parent="."]
+position = Vector2(43.169, 4.90119)
+scale = Vector2(0.331563, 0.336385)
+texture = ExtResource("10_bpsuu")
+
+[node name="Spritesheet3" type="Sprite2D" parent="."]
+position = Vector2(42.795, 7.49978)
+rotation = -1.57079
+scale = Vector2(0.0215042, 0.375757)
+texture = ExtResource("10_bpsuu")
+
+[node name="ShieldIcon" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-43.9671, 7.14905)
+scale = Vector2(1.16695, 1.16695)
+
+[node name="Spritesheet23" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(0.875706, -4.29884)
+rotation = 0.523598
+scale = Vector2(0.136861, 0.0512799)
+texture = ExtResource("19_d6d4g")
+
+[node name="Spritesheet26" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(-1.21137, -4.17607)
+rotation = -0.523598
+scale = Vector2(0.136861, 0.0512799)
+texture = ExtResource("12_5pshi")
+
+[node name="Spritesheet24" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(2.8184, -4.50306)
+rotation = -0.523598
+scale = Vector2(0.191746, 0.0512799)
+texture = ExtResource("12_fr8n7")
+
+[node name="Spritesheet25" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(-2.92186, -3.98118)
+rotation = 0.387813
+scale = Vector2(0.128139, 0.0345787)
+texture = ExtResource("13_5a2mv")
+
+[node name="Spritesheet18" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(-4.03163, -2.28972)
+scale = Vector2(0.0625, 0.285351)
+texture = ExtResource("5_e8rim")
+
+[node name="Spritesheet21" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(-2.7475, 2.48712)
+rotation = -0.523598
+scale = Vector2(0.0586755, 0.418946)
+texture = ExtResource("14_rdmm3")
+
+[node name="Spritesheet22" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(2.15364, 2.43498)
+rotation = 0.523598
+scale = Vector2(0.0586755, 0.417065)
+texture = ExtResource("15_5vly2")
+
+[node name="Spritesheet14" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(0.202487, 4.79078)
+scale = Vector2(0.18242, 0.0779001)
+texture = ExtResource("16_8dh1n")
+
+[node name="Spritesheet20" type="Sprite2D" parent="ShieldIcon"]
+position = Vector2(3.62315, -2.26819)
+scale = Vector2(0.0625, 0.273239)
+texture = ExtResource("17_5w3dc")
+flip_h = true
+
+[node name="ShieldOn" type="Sprite2D" parent="ShieldIcon"]
+unique_name_in_owner = true
+position = Vector2(-2.61934, -1.77197)
+scale = Vector2(0.640922, 0.193456)
+texture = ExtResource("10_bpsuu")
+
+[node name="Spritesheet12" type="Sprite2D" parent="ShieldIcon/ShieldOn"]
+position = Vector2(5.09263, 15.2864)
+rotation = 1.08907
+scale = Vector2(0.370872, 1.6134)
+skew = -0.916538
+texture = ExtResource("15_5vly2")
+
+[node name="Spritesheet21" type="Sprite2D" parent="ShieldIcon/ShieldOn"]
+position = Vector2(3.79554, 14.2269)
+scale = Vector2(0.20009, 0.923735)
+texture = ExtResource("18_gi82p")
+
+[node name="Spritesheet9" type="Sprite2D" parent="ShieldIcon/ShieldOn"]
+position = Vector2(3.6796, 12.1152)
+scale = Vector2(0.392846, 0.779824)
+texture = ExtResource("19_d6d4g")
+flip_h = true
+
+[node name="Spritesheet8" type="Sprite2D" parent="ShieldIcon/ShieldOn"]
+position = Vector2(4.10596, 13.1972)
+scale = Vector2(0.248403, 2.13692)
+texture = ExtResource("12_fr8n7")
+
+[node name="Spritesheet13" type="Sprite2D" parent="ShieldIcon/ShieldOn"]
+position = Vector2(2.19446, 17.0632)
+rotation = -1.08923
+scale = Vector2(0.37095, 1.47921)
+skew = 0.916633
+texture = ExtResource("17_5w3dc")
+flip_h = true
+
+[node name="ShieldOff" type="Sprite2D" parent="ShieldIcon"]
+unique_name_in_owner = true
+modulate = Color(1, 0.521569, 0.388235, 1)
+position = Vector2(-0.41717, 0.17976)
+rotation = -0.873859
+scale = Vector2(0.127461, 0.850516)
+texture = ExtResource("17_5w3dc")

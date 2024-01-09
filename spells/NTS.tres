@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://bm46scsc8i2er"]
+
+[ext_resource type="Texture2D" uid="uid://cd8ghc82u7dr2" path="res://sprites/meta/words/nts.png" id="1_5defl"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_imqd0"]
+
+[resource]
+script = ExtResource("2_imqd0")
+name = "NTS"
+image = ExtResource("1_5defl")
+empty = false
+bullet_property = 5
+spell_1_damage_modifier = 1.0
+spell_1_speed_modifier = 0.9
+spell_1_fire_rate_modifier = 1.1
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 2
+fire_rate = 0.25
+damage_modifier = 1.5
+speed = 500
+speed_random_distribution = 0.0
+drag = 0.5
+spread_degrees = 5.0
+num_bullets = 2
+num_bursts = 1
+num_pierces = 2
+burst_rate = 0.1
+flank_angle = 120
+flank_time = 0.1

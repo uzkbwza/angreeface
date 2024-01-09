@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cct4n53vxb234"]
+
+[ext_resource type="Texture2D" uid="uid://djrnlvrt3uyd" path="res://sprites/meta/words/to.png" id="1_3db0d"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_yrhf7"]
+
+[resource]
+script = ExtResource("2_yrhf7")
+name = "TO"
+image = ExtResource("1_3db0d")
+empty = false
+special = false
+bullet_property = 3
+spell_1_damage_modifier = 0.8
+spell_1_speed_modifier = 1.2
+spell_1_fire_rate_modifier = 1.8
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 0.8
+damage_modifier = 1.1
+speed = 300
+speed_random_distribution = 0.1
+drag = 0.1
+spread_degrees = 33.0
+num_bullets = 3
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

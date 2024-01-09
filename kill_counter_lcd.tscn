@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://celnh6k87322a"]
+
+[ext_resource type="Script" path="res://kill_counter_lcd.gd" id="1_ypeon"]
+[ext_resource type="Texture2D" uid="uid://f40n8krg4blk" path="res://sprites/meta/spritesheet_18.png" id="2_6hjmi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1d3r"]
+bg_color = Color(0.14902, 0.117647, 0.227451, 0.941176)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(20, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 17.0
+offset_bottom = 32.0
+script = ExtResource("1_ypeon")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 18.0
+offset_bottom = 33.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k1d3r")
+
+[node name="KillCounterLCD" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.729412)
+metadata/_edit_vertical_guides_ = [17.0]
+metadata/_edit_horizontal_guides_ = [32.0, 16.0]
+
+[node name="Top" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_left = 2.0
+offset_right = 15.0
+offset_bottom = 4.0
+rotation = 5.33548e-05
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="Middle" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 18.0
+rotation = 5.33548e-05
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="Bottom" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_left = 2.0
+offset_top = 28.0
+offset_right = 15.0
+offset_bottom = 32.0
+rotation = 5.33548e-05
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="E1" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 17.0
+offset_bottom = 15.0
+rotation = 5.33548e-05
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="E2" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 17.0
+offset_bottom = 29.0
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="W1" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_top = 3.0
+offset_right = 4.0
+offset_bottom = 15.0
+texture = ExtResource("2_6hjmi")
+expand_mode = 1
+
+[node name="W2" type="TextureRect" parent="KillCounterLCD"]
+unique_name_in_owner = true
+offset_top = 17.0
+offset_right = 4.0
+offset_bottom = 29.0
+texture = ExtResource("2_6hjmi")
+expand_mode = 1

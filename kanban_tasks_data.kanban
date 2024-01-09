@@ -1,0 +1,313 @@
+{
+	"categories": [
+		{
+			"uuid": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"title": "Task",
+			"color": "699ce8"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "88092818-7ada-4df6-ad65-11f23656ee7b",
+			"title": "Todo",
+			"tasks": [
+				"bd43582f-6a0e-413b-b436-e4ed5b4d6010",
+				"4bb61818-0e20-4d1a-8711-c551d4e35cb1",
+				"bd3c3150-d773-46a0-829a-2c0d88f5299f",
+				"32433b23-56e3-4189-98f7-770534d13b04",
+				"2bd844fb-9a15-4205-9e3e-25bd12529207",
+				"ef1bc08e-62b6-43c5-b62e-5a4b6296355f",
+				"9a726f16-b3fb-4e50-b5ce-3fcf636a4cf7"
+			]
+		},
+		{
+			"uuid": "a1e7e87e-3ad7-4eed-b38e-2fc6c6aa21ec",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "ea9f0c84-a497-4f98-aa1b-f0b7b0328f4b",
+			"title": "Done",
+			"tasks": [
+				"c75ff3e7-3fa3-4b85-970f-83045a53ee65",
+				"e811bea1-73a9-4ea4-a7bc-23cc4d0433cc",
+				"3576f839-a022-4ffa-8563-d905175d2462",
+				"fa96b840-563d-4b80-841f-746cfce46204",
+				"a5bc34b8-1324-4a3b-bfab-971ce42b31ae",
+				"7d5d8153-996d-4384-a867-2ca1f981302d",
+				"d0582ea5-980e-489f-befc-aaa561d5cb2c",
+				"979b21bc-7245-456f-9724-99b075bbd36f",
+				"edd4f1bd-3a6a-43e1-b4e0-e3824d445948",
+				"d8a3f37f-d0a7-4b48-85ff-016f114de60d",
+				"89a004c6-b105-4883-87f9-b78832458ec8",
+				"36c70b2c-ef17-48b4-88ca-7a0f3dea34b8",
+				"7762f179-b509-4685-94c9-2b10be4a8cb2",
+				"5c53240e-a9f0-49af-9133-ae058271efc5",
+				"7fcfce8e-6a3a-482e-804a-bd1b137b75d8",
+				"f1948ee3-8b45-47b6-8740-474f4fb2953a",
+				"a0722a3c-0c51-4b28-9fab-b7f5063ac021",
+				"5efd2fab-8a64-49e7-8047-992f26b4d4d3",
+				"49603c2b-6c7a-400c-a2d9-565190720000"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "7762f179-b509-4685-94c9-2b10be4a8cb2",
+			"title": "enemy spell display",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "e811bea1-73a9-4ea4-a7bc-23cc4d0433cc",
+			"title": "burst fire",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "c75ff3e7-3fa3-4b85-970f-83045a53ee65",
+			"title": "shotgun",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "fa96b840-563d-4b80-841f-746cfce46204",
+			"title": "cannon",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "3576f839-a022-4ffa-8563-d905175d2462",
+			"title": "triple burst",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "36c70b2c-ef17-48b4-88ca-7a0f3dea34b8",
+			"title": "add more variance to spell1",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "d0582ea5-980e-489f-befc-aaa561d5cb2c",
+			"title": "kill enemies to absorb power",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "a5bc34b8-1324-4a3b-bfab-971ce42b31ae",
+			"title": "cap knockback",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "89a004c6-b105-4883-87f9-b78832458ec8",
+			"title": "floor texture for reference",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "bd43582f-6a0e-413b-b436-e4ed5b4d6010",
+			"title": "bullet disappear particle",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": [
+				{
+					"details": "sdf",
+					"done": true
+				},
+				{
+					"details": "sd",
+					"done": true
+				},
+				{
+					"details": "f",
+					"done": true
+				},
+				{
+					"details": "sf",
+					"done": true
+				},
+				{
+					"details": "sdf",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "d8a3f37f-d0a7-4b48-85ff-016f114de60d",
+			"title": "explosives",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "f1948ee3-8b45-47b6-8740-474f4fb2953a",
+			"title": "finish spells",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "7d5d8153-996d-4384-a867-2ca1f981302d",
+			"title": "when take damage and have spell: you lose spell. otherwise lose hp.",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "4bb61818-0e20-4d1a-8711-c551d4e35cb1",
+			"title": "give them a reason to switch",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "5c53240e-a9f0-49af-9133-ae058271efc5",
+			"title": "kill counter (binary?)",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "bd3c3150-d773-46a0-829a-2c0d88f5299f",
+			"title": "enemy death effect",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "32433b23-56e3-4189-98f7-770534d13b04",
+			"title": "cast effect",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "979b21bc-7245-456f-9724-99b075bbd36f",
+			"title": "add map boundary for player",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "edd4f1bd-3a6a-43e1-b4e0-e3824d445948",
+			"title": "save high score",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "2bd844fb-9a15-4205-9e3e-25bd12529207",
+			"title": "sounds",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": [
+				{
+					"details": "all bullets",
+					"done": true
+				},
+				{
+					"details": "hit effects",
+					"done": true
+				},
+				{
+					"details": "switch spell",
+					"done": true
+				},
+				{
+					"details": "spell drop",
+					"done": false
+				},
+				{
+					"details": "spell pickup",
+					"done": false
+				},
+				{
+					"details": "movement sounds",
+					"done": false
+				},
+				{
+					"details": "on fire sounds",
+					"done": false
+				},
+				{
+					"details": "split sound",
+					"done": false
+				},
+				{
+					"details": "lightning zap",
+					"done": false
+				},
+				{
+					"details": "no shield alert",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "7fcfce8e-6a3a-482e-804a-bd1b137b75d8",
+			"title": "paralyze does crit damage",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "ef1bc08e-62b6-43c5-b62e-5a4b6296355f",
+			"title": "make enemy bullets more visible",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "a0722a3c-0c51-4b28-9fab-b7f5063ac021",
+			"title": "fix camera jitter",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "5efd2fab-8a64-49e7-8047-992f26b4d4d3",
+			"title": "fullscreen toggle",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "49603c2b-6c7a-400c-a2d9-565190720000",
+			"title": "add music",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		},
+		{
+			"uuid": "9a726f16-b3fb-4e50-b5ce-3fcf636a4cf7",
+			"title": "add music toggle",
+			"description": "",
+			"category": "87fe8787-b413-4489-b1d1-c0ee20952d42",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"88092818-7ada-4df6-ad65-11f23656ee7b"
+			],
+			[
+				"a1e7e87e-3ad7-4eed-b38e-2fc6c6aa21ec"
+			],
+			[
+				"ea9f0c84-a497-4f98-aa1b-f0b7b0328f4b"
+			]
+		]
+	}
+}

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://bmt1fh02w04gl"]
+
+[ext_resource type="Texture2D" uid="uid://b2c1f8p8emcjv" path="res://sprites/meta/words/ro.png" id="1_av6ef"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_ljoqk"]
+
+[resource]
+script = ExtResource("2_ljoqk")
+name = "RO"
+image = ExtResource("1_av6ef")
+empty = false
+special = false
+bullet_property = 6
+spell_1_damage_modifier = 1.2
+spell_1_speed_modifier = 1.2
+spell_1_fire_rate_modifier = 1.2
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Poison"
+fire_pattern = 0
+fire_rate = 0.064
+damage_modifier = 0.2
+speed = 300
+speed_random_distribution = 0.0
+drag = 0.0
+spread_degrees = 30.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://clpx5846ha2dv"]
+
+[ext_resource type="Texture2D" uid="uid://6wp2nuvketkg" path="res://sprites/meta/words/oes.png" id="1_71a5h"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_mwxu5"]
+
+[resource]
+script = ExtResource("2_mwxu5")
+name = "OES"
+image = ExtResource("1_71a5h")
+empty = false
+special = false
+bullet_property = 6
+spell_1_damage_modifier = 0.8
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 1.3
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 0
+fire_rate = 1.7
+damage_modifier = 0.1
+speed = 350
+speed_random_distribution = 0.1
+drag = 1.0
+spread_degrees = 10.0
+num_bullets = 3
+num_bursts = 13
+num_pierces = 1
+burst_rate = 0.016
+flank_angle = 90
+flank_time = 0.016

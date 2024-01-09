@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://qwwr2qms0y17"]
+
+[ext_resource type="Texture2D" uid="uid://ccspq25pp410q" path="res://sprites/meta/words/ons.png" id="1_lxbrl"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_4mnrc"]
+
+[resource]
+script = ExtResource("2_4mnrc")
+name = "ONS"
+image = ExtResource("1_lxbrl")
+empty = false
+bullet_property = 5
+spell_1_damage_modifier = 2.0
+spell_1_speed_modifier = 1.0
+spell_1_fire_rate_modifier = 0.5
+call_update_functions = ""
+additional_properties = "Fire"
+call_update_functions_2 = ""
+additional_properties_2 = "Explosive"
+fire_pattern = 0
+fire_rate = 0.1
+damage_modifier = 0.4
+speed = 200
+speed_random_distribution = 0.4
+drag = 0.0
+spread_degrees = 5.0
+num_bullets = 1
+num_bursts = 1
+num_pierces = 1
+burst_rate = 0.1
+flank_angle = 90
+flank_time = 0.016

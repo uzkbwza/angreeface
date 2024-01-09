@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://by61lt30561nt"]
+
+[ext_resource type="Texture2D" uid="uid://trfdrjjrmtww" path="res://sprites/meta/words/liq.png" id="1_6xqi4"]
+[ext_resource type="Script" path="res://Spell.gd" id="2_5xeew"]
+
+[resource]
+script = ExtResource("2_5xeew")
+name = "LIQ"
+image = ExtResource("1_6xqi4")
+empty = false
+special = false
+bullet_property = 8
+spell_1_damage_modifier = 0.7
+spell_1_speed_modifier = 1.2
+spell_1_fire_rate_modifier = 1.2
+call_update_functions = ""
+additional_properties = ""
+call_update_functions_2 = ""
+additional_properties_2 = "Paralyze"
+fire_pattern = 0
+fire_rate = 0.5
+damage_modifier = 0.5
+speed = 290
+speed_random_distribution = 0.1
+drag = 1.0
+spread_degrees = 5.0
+num_bullets = 1
+num_bursts = 3
+num_pierces = 1
+burst_rate = 0.05
+flank_angle = 90
+flank_time = 0.016

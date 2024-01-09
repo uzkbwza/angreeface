@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=3 format=3 uid="uid://cdnsp30me8ryv"]
+
+[ext_resource type="Texture2D" uid="uid://cy0at4c4oajp2" path="res://sprites/meta/words/buil.png" id="2_qsyie"]
+[ext_resource type="Script" path="res://Spell.gd" id="3_6b7sh"]
+
+[resource]
+script = ExtResource("3_6b7sh")
+name = "ANI"
+image = ExtResource("2_qsyie")
+empty = false
+special = false
+bullet_property = 1
+spell_1_damage_modifier = 0.8
+spell_1_speed_modifier = 0.8
+spell_1_fire_rate_modifier = 2.0
+call_update_functions = ""
+additional_properties = "Piercing"
+call_update_functions_2 = ""
+additional_properties_2 = ""
+fire_pattern = 1
+fire_rate = 0.4
+damage_modifier = 0.2
+speed = 250
+speed_random_distribution = 0.01
+drag = 0.0
+spread_degrees = 10.0
+num_bullets = 3
+num_bursts = 4
+num_pierces = 1
+burst_rate = 0.016
+flank_angle = 90
+flank_time = 0.016
